@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout onLaunch="launch">
+	<tabs id="tabs" onChange="tab_change">
+		<tab text="Browser">
+			<grid>
+				<row weight="wrap">
+					<button icon="back" onTap="back" />
+					<button icon="more" onTap="goto" />
+					<button icon="arrowup" onTap="up" />
+					<button icon="home" onTap="home" />
+					<button icon="refresh" onTap="refresh"/>
+					<button icon="favorite" onTap="star"/>
+				</row>
+				<row>
+					<list id="list" onTap="item" onHold="hold" />
+				</row>
+			</grid>
+		</tab>
+		<tab text="Favorites">
+			<row>
+				<list id="favorites" onTap="favorite_item" onHold="favorite_hold"/>
+			</row>
+		</tab>
+	</tabs>
+</layout>

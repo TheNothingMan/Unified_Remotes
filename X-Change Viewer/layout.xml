@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout onVolumeUp="volume_up" onVolumeDown="volume_down">
+	<tabs>
+		<tab text="PDF">
+			<row lightcolor="#e77300" darkcolor="#c46e19" weight="1">
+				<button text="Previous" ontap="previous_document" />
+				<button text="Next" ontap="next_document"/>
+			</row>
+			<row weight="1">
+				<button text="Fullscreen" ontap="fullscreen" />
+				<button text="Fit" ontap="view_fit"/>
+				<button id= "toggle_overview" text="Overview" ontap="overview"/>
+				<button text="+" ontap="zoom_in"/>
+				<button text="-" ontap="zoom_out"/>
+			</row>
+			<row weight="1">
+				<button text="Double\nSlide" ontap="view_double_slide"/>
+				<button text="Double" ontap="view_double"/>
+				<button text="Single\nSlide" ontap="view_single_slide"/>
+				<button text="Single" ontap="view_single"/>
+			</row>
+			<row weight="1" color="blue">
+				<label weight="wrap" id="title" text="Connecting..." />
+				<button icon="previous" ontap="previous" />
+				<button id="play" icon="playpause" ontap="play_pause" />
+				<button icon="next" ontap="next" />
+			</row>
+			<row weight="3">
+				<grid color = "yellow">
+					<row>
+						<button text="Up" ontap="up"/>
+					</row>
+					<row>
+						<button text="Down" ontap="down"/>
+					</row>
+				</grid>
+				<button weight= "1" text="Page up" ontap="page_up" color="red"/>
+				<button weight= "3" text="Page down" ontap="page_down" color="green" />
+			</row>
+		</tab>
+		<tab text="VLC">
+			<row>
+				<button icon="vdown" ontap="volume_down" />
+				<button icon="vmute" ontap="volume_mute" />
+				<button icon="vup" ontap="volume_up" />
+			</row>
+			<row>
+				<button icon="rwd" ontap="jump_back" />
+				<button icon="repeat" ontap="loop_repeat" />
+				<button icon="ff" ontap="jump_forward" />
+			</row>
+			<row>
+				<button icon="previous" ontap="previous" />
+				<button icon="shuffle" ontap="shuffle" />
+				<button icon="next" ontap="next" />
+			</row>
+			<row>
+				<button icon="stop" ontap="stop" />
+				<button icon="fullscreen" ontap="vlc_fullscreen" />
+				<button icon="playpause" ontap="play_pause" />
+			</row>
+		</tab>
+	</tabs>
+</layout>
