@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layout onlaunch="launch" onVolumeUp="volume_up_sys" onVolumeDown="volume_down_sys" lightcolor="#e77300" darkcolor="#c46e19">
+	<tabs>
+		<tab text="Playing">
+			<row weight="wrap">
+				<label id="title" text="Connecting..." />
+			</row>
+			<row>
+				<image id="art" />
+			</row>
+			<row weight="wrap">
+				<slider id="pos" text="Position" onchange="position_change" onup="position_stop" />
+			</row>
+			<row weight="wrap">
+				<slider id="vol" text="Volume" onchange="volume_change"/>
+			</row>
+			<row weight="wrap">
+				<button icon="previous" ontap="previous" />
+				<button id="play" icon="playpause" ontap="play_pause" />
+				<button icon="next" ontap="next" />
+			</row>
+		</tab>
+		<tab text="Playback">
+			<row color="blue">
+				<button icon="vdown" ontap="volume_down" />
+				<button icon="vmute" ontap="volume_mute" />
+				<button icon="vup" ontap="volume_up" />
+			</row>
+			<row color="green">
+				<button icon="rwd" ontap="jump_back" />
+				<button icon="playpause" color="red" ontap="play_pause" />
+				<button icon="ff" ontap="jump_forward" />
+			</row>
+			<row color="purple">
+				<button icon="previous" ontap="previous" />
+				<button icon="stop" color="red" ontap="stop" />
+				<button icon="next" ontap="next" />
+			</row>
+			<row>
+				<button icon="repeat" ontap="loop_repeat" />
+				<button icon="shuffle" ontap="shuffle" />
+				<button icon="fullscreen" color="yellow" ontap="fullscreen" />
+				<button text="ratio" color="yellow" ontap="ratio" />
+			</row>
+		</tab>
+		<tab text="Library">
+			<row>
+				<list id="list" ontap="library_select">
+					<item text="Loading..." />
+				</list>
+			</row>
+			<row weight="wrap">
+				<button icon="back" ontap="library_back" />
+				<button icon="refresh" ontap="library_refresh" />
+			</row>
+		</tab>
+		<tab text="DVD">
+			<row color="grey">
+				<button text="Subtitle" ontap="dvd_subtitle"/>
+				<button icon="up" color="green" ontap="dvd_up"/>
+				<button text="audio" ontap="dvd_audio"/>
+			</row>
+			<row>
+				<button icon="left" color="green" ontap="dvd_left"/>
+				<button icon="select" color="blue" ontap="dvd_ok"/>
+				<button icon="right" color="green" ontap="dvd_right"/>
+			</row>
+			<row color="grey">
+				<button text="Menu" ontap="dvd_menu"/>
+				<button icon="down" color="green" ontap="dvd_down"/>
+				<button text="Chapter" ontap="dvd_chapter"/>
+			</row>
+		</tab>
+	</tabs>
+</layout>

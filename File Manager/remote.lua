@@ -1,6 +1,7 @@
 local fs = libs.fs;
 local server = libs.server;
 local device = libs.device;
+local log = require("log");
 
 -------------------------------------------------------------------
 
@@ -77,11 +78,12 @@ actions.tab_change = function(index)
 	if settings.fav_path == nil then
 		settings.fav_path=fs.combine(fs.remotedir(),"favorites.txt");
 	end
+	log.info("hello");
 	if index == 1 then
 		favorites = fs.readlines(settings.fav_path);
 		favorite_items = {};
 		for t = 1, #favorites do
-			if favorites[t] ~= "" then
+			if favorites[t] ~= "" and fs.exists(favorites[t]) then
 				table.insert(favorite_items, {
 					type = "item",
 					icon = "folder",
